@@ -27,6 +27,7 @@ class PlayViewController: UIViewController {
         myView.playButton.addTarget(self, action: #selector(PlayButton), for: .touchUpInside)
         myView.colorBook.addTarget(self, action: #selector(setColorBook), for: .touchUpInside)
         myView.howToPlay.addTarget(self, action: #selector(setHowTo), for: .touchUpInside)
+        //oi
         
          // Letras
         let labels = self.myView.getLabels()
