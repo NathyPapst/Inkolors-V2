@@ -61,7 +61,7 @@ class howToView: UIView {
         lbl.font = .systemFont(ofSize: sizeFont, weight: w)
         lbl.numberOfLines = 0
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "In this game, we have three types of medals you can win. One bronze, one silver and one gold. Each one you receive according to your performance in the stage. The better your performance the better your chance of winning the gold medal."
+        lbl.text = "In this game, we have three types of medals you can win. One bronze, one silver and one gold. Each one you receive according to your performance in the stage.\n\n The better your performance the better your chances of winning the gold medal.\n\n Drag the splashes of color into the empty circles, completing all of them and advancing to the next levels."
         lbl.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return lbl
     }
@@ -95,6 +95,6 @@ class howToView: UIView {
         // Info text
         self.infoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 45).isActive = true
         self.infoLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -45).isActive = true
-        self.infoLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.35).isActive = true
+        self.infoLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.3).isActive = true
     }
 }
