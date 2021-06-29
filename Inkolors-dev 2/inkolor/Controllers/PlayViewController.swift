@@ -23,11 +23,9 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myView.playButton.layer.cornerRadius = self.view.bounds.height * 0.19 * 0.5
         myView.playButton.addTarget(self, action: #selector(PlayButton), for: .touchUpInside)
         myView.colorBook.addTarget(self, action: #selector(setColorBook), for: .touchUpInside)
         myView.howToPlay.addTarget(self, action: #selector(setHowTo), for: .touchUpInside)
-        //oi
         
          // Letras
         let labels = self.myView.getLabels()
@@ -41,7 +39,11 @@ class PlayViewController: UIViewController {
 
     }
     @objc func PlayButton() {
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "idMenu") as? MenuViewController else
+        {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
     @objc func setColorBook() {
         

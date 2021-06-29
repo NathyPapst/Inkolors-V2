@@ -88,6 +88,8 @@ class PlayView: UIView {
         
         let sizeBut: CGFloat = 0.19
         
+        playButton.layer.cornerRadius = self.bounds.height * 0.19 * 0.5
+        
         /* MARK: Constraints - Letters */
         
         // Letra I
