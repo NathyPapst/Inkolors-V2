@@ -58,7 +58,7 @@ class MenuViewController: UIViewController {
             
             if (x <= self.completedLevels) {
                 buttons[x].isEnabled = true
-                buttons[x].backgroundColor = #colorLiteral(red: 0.4485500455, green: 0.8666214347, blue: 0.7166131139, alpha: 1)
+                buttons[x].backgroundColor = #colorLiteral(red: 0.6227829456, green: 0.3547682166, blue: 0.8711426854, alpha: 1)
             }
         }
         
