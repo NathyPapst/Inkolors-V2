@@ -19,6 +19,10 @@
 		22CCF2972679E50E004EC382 /* PrizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CCF2962679E50E004EC382 /* PrizeView.swift */; };
 		4A0F4A9926863E7C00306C8C /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F4A9826863E7C00306C8C /* PlayViewController.swift */; };
 		4A0F4A9B26863EB100306C8C /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F4A9A26863EB100306C8C /* PlayView.swift */; };
+		4ABADCA3268B57AC0060CA09 /* howToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABADCA2268B57AC0060CA09 /* howToViewController.swift */; };
+		4ABADCA5268B57BF0060CA09 /* colorBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABADCA4268B57BF0060CA09 /* colorBookViewController.swift */; };
+		4ABADCA7268B57F00060CA09 /* howToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABADCA6268B57F00060CA09 /* howToView.swift */; };
+		4ABADCA9268B58020060CA09 /* colorBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABADCA8268B58020060CA09 /* colorBookView.swift */; };
 		9D1656AD2667FB2E00A11C69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1656AC2667FB2E00A11C69 /* AppDelegate.swift */; };
 		9D1656AF2667FB2E00A11C69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1656AE2667FB2E00A11C69 /* SceneDelegate.swift */; };
 		9D1656B42667FB2E00A11C69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1656B22667FB2E00A11C69 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 		22CCF2962679E50E004EC382 /* PrizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeView.swift; sourceTree = "<group>"; };
 		4A0F4A9826863E7C00306C8C /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		4A0F4A9A26863EB100306C8C /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		4ABADCA2268B57AC0060CA09 /* howToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = howToViewController.swift; sourceTree = "<group>"; };
+		4ABADCA4268B57BF0060CA09 /* colorBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorBookViewController.swift; sourceTree = "<group>"; };
+		4ABADCA6268B57F00060CA09 /* howToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = howToView.swift; sourceTree = "<group>"; };
+		4ABADCA8268B58020060CA09 /* colorBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorBookView.swift; sourceTree = "<group>"; };
 		9D1656A92667FB2E00A11C69 /* inkolor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inkolor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1656AC2667FB2E00A11C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1656AE2667FB2E00A11C69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 				22703A962668BA5B00514E5A /* ActionViewController.swift */,
 				225C0B8D2668D842004D75E8 /* PrizeViewController.swift */,
 				4A0F4A9826863E7C00306C8C /* PlayViewController.swift */,
+				4ABADCA2268B57AC0060CA09 /* howToViewController.swift */,
+				4ABADCA4268B57BF0060CA09 /* colorBookViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -85,6 +95,8 @@
 				22CCF28F2679E4D6004EC382 /* ActionView.swift */,
 				22CCF2962679E50E004EC382 /* PrizeView.swift */,
 				4A0F4A9A26863EB100306C8C /* PlayView.swift */,
+				4ABADCA6268B57F00060CA09 /* howToView.swift */,
+				4ABADCA8268B58020060CA09 /* colorBookView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,12 +234,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CCF2902679E4D6004EC382 /* ActionView.swift in Sources */,
+				4ABADCA5268B57BF0060CA09 /* colorBookViewController.swift in Sources */,
 				9D1656CF26686F5A00A11C69 /* MenuViewController.swift in Sources */,
 				22703A932668B06900514E5A /* Buttons.swift in Sources */,
 				4A0F4A9B26863EB100306C8C /* PlayView.swift in Sources */,
+				4ABADCA3268B57AC0060CA09 /* howToViewController.swift in Sources */,
 				2234DD4D26696C490020994C /* Circule.swift in Sources */,
 				9D1656AD2667FB2E00A11C69 /* AppDelegate.swift in Sources */,
+				4ABADCA7268B57F00060CA09 /* howToView.swift in Sources */,
 				22CCF2952679E501004EC382 /* IntroView.swift in Sources */,
+				4ABADCA9268B58020060CA09 /* colorBookView.swift in Sources */,
 				2234DD49266952E80020994C /* IntroViewController.swift in Sources */,
 				22CCF2972679E50E004EC382 /* PrizeView.swift in Sources */,
 				9D1656AF2667FB2E00A11C69 /* SceneDelegate.swift in Sources */,

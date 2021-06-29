@@ -25,7 +25,7 @@ class PlayViewController: UIViewController {
         super.viewDidLoad()
         myView.playButton.addTarget(self, action: #selector(PlayButton), for: .touchUpInside)
         myView.colorBook.addTarget(self, action: #selector(setColorBook), for: .touchUpInside)
-        myView.howToPlay.addTarget(self, action: #selector(setHowTo), for: .touchUpInside)
+        myView.howToPlay.addTarget(self, action: #selector(setHowToPlay), for: .touchUpInside)
         
          // Letras
         let labels = self.myView.getLabels()
@@ -46,10 +46,18 @@ class PlayViewController: UIViewController {
         present(vc, animated: true)
     }
     @objc func setColorBook() {
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "idColor") as? colorBookViewController else
+        {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
-    @objc func setHowTo() {
-        
+    @objc func setHowToPlay() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "idHowTo") as? howToViewController else
+        {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
 
 }

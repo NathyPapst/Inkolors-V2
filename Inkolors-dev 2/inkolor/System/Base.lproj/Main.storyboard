@@ -11,7 +11,7 @@
         <!--PlayViewController-->
         <scene sceneID="eHM-lU-xrS">
             <objects>
-                <viewController title="PlayViewController" id="8k4-Aa-bSp" customClass="PlayViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="idPlay" title="PlayViewController" id="8k4-Aa-bSp" customClass="PlayViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xux-pN-PP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-235" y="-579"/>
@@ -22,7 +22,23 @@
                 <viewController storyboardIdentifier="idMenu" id="lVI-fr-nPn" customClass="MenuViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrX-xu-rjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="-579"/>
+            <point key="canvasLocation" x="525" y="-579"/>
+        </scene>
+        <!--How To View Controller-->
+        <scene sceneID="rE6-7S-8dD">
+            <objects>
+                <viewController storyboardIdentifier="idHowTo" id="fE3-gg-p04" customClass="howToViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h8-Of-KXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="100"/>
+        </scene>
+        <!--Color Book View Controller-->
+        <scene sceneID="uCo-lb-7cZ">
+            <objects>
+                <viewController storyboardIdentifier="idColor" id="pSL-xR-WIL" customClass="colorBookViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1K-2I-IuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="100"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="05A-hS-jIe">
@@ -37,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d40-g2-rpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-579"/>
+            <point key="canvasLocation" x="1293" y="-579"/>
         </scene>
         <!--Action View Controller-->
         <scene sceneID="LGt-rt-3n7">
@@ -52,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fR-H5-x6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="-579"/>
+            <point key="canvasLocation" x="2051" y="-579"/>
         </scene>
         <!--Prize View Controller-->
         <scene sceneID="35v-jf-uvf">
@@ -67,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVe-nU-lun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2923" y="-579"/>
+            <point key="canvasLocation" x="2783" y="-579"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.99183028939999995" green="0.97708588839999999" blue="0.93332773449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
