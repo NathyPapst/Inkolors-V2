@@ -35,7 +35,15 @@
         <!--Color Book View Controller-->
         <scene sceneID="uCo-lb-7cZ">
             <objects>
-                <viewController storyboardIdentifier="idColor" id="pSL-xR-WIL" customClass="colorBookViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController storyboardIdentifier="idColor" id="pSL-xR-WIL" customClass="colorBookViewController" customModule="inkolor" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="x9H-Mv-eaq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uNe-4y-XQQ"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="gTk-sQ-R2l"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="SOe-V4-0EB"/>
+                    </scrollView>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1K-2I-IuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="100"/>
