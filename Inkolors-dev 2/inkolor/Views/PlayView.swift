@@ -39,7 +39,7 @@ class PlayView: UIView {
         bt.setTitleColor(#colorLiteral(red: 1, green: 0.9844267964, blue: 0.9319559932, alpha: 1), for: .normal)
         bt.titleLabel?.font = UIFont.boldSystemFont(ofSize: self.bounds.height * 1)
         bt.backgroundColor = #colorLiteral(red: 0.6227829456, green: 0.3547682166, blue: 0.8711426854, alpha: 1)
-        bt.imageEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 10)
+        bt.imageEdgeInsets = UIEdgeInsets(top: 10, left: 25, bottom: 10, right: 10)
         bt.setImage(UIImage(named: "Play"), for: .normal)
         bt.translatesAutoresizingMaskIntoConstraints = false
         bt.clipsToBounds = true

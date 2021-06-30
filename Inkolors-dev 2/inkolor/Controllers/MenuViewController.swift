@@ -6,9 +6,6 @@ import UIKit
 
 class MenuViewController: UIViewController {
     let myView = MenuView()
-    
-    let letters:[String] = ["I", "N", "K", "O", "L", "O", "R", "S"]
-    let colors:[UIColor] = [#colorLiteral(red: 0, green: 0.6439785361, blue: 0, alpha: 1) ,  #colorLiteral(red: 0.7766265869, green: 0, blue: 0.6352015734, alpha: 1),  #colorLiteral(red: 0, green: 0.6153349876, blue: 0.5963861346, alpha: 1),  #colorLiteral(red: 1, green: 0.4701431394, blue: 0, alpha: 1),  #colorLiteral(red: 0.7766265869, green: 0, blue: 0.6352015734, alpha: 1),  #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1),  #colorLiteral(red: 0.3140003979, green: 0.8086813688, blue: 0.6361778378, alpha: 1),  #colorLiteral(red: 0.6979225278, green: 0.7649332881, blue: 0, alpha: 1)]
     let medals:[UIImage] = [#imageLiteral(resourceName: "medalha-pequena-bronze"), #imageLiteral(resourceName: "medalha-pequena-prata"), #imageLiteral(resourceName: "medalha-pequena-ouro")]
     
     let defaults = UserDefaults.standard
@@ -33,18 +30,12 @@ class MenuViewController: UIViewController {
         self.currentLevel = self.defaults.integer(forKey: "level")
         self.completedLevels = self.defaults.integer(forKey: "completedLevels")
         
+        myView.buttonBack.addTarget(self, action: #selector(actBack), for: .touchDown)
+        
         self.myView.setCompletedLevels(level: self.completedLevels)
         
         
-        // Letras
-        let labels = self.myView.getLabels()
-        for x in 0..<self.colors.count {
-            labels[x].text = self.letters[x]
-            labels[x].textColor = self.colors[x]
-            
-            labels[x].font = .systemFont(ofSize: self.view.bounds.height * 0.065, weight: .bold)
-        }
-        
+        myView.titleLabel.font = UIFont.boldSystemFont(ofSize: self.view.bounds.height * 0.03)
         
         // Botões
         let buttons = self.myView.getButtons()
@@ -83,5 +74,12 @@ class MenuViewController: UIViewController {
         self.defaults.set(0, forKey: "level")
         self.defaults.set(0, forKey: "completedLevels")
         self.defaults.set(true, forKey: "soundOn")
+    }
+    
+    @IBAction func actBack() -> Void{
+        guard let vc = storyboard?.instantiateViewController(identifier: "idPlay") as? PlayViewController else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
 }

@@ -12,9 +12,14 @@ class MenuView: UIView {
     var buttons:[UIButton] = []
     var medals:[UIImageView] = []
     var completedLevels:Int = 0
+    var titleLabel: UILabel = UILabel()
+    var buttonBack: UIButton = UIButton()
     
     init() {
         super.init(frame: .zero)
+        
+        self.buttonBack = setbuttonBack()
+        self.addSubview(self.buttonBack)
         
         // Criando as labels (letras)
         for i in 0..<8 {
@@ -30,6 +35,9 @@ class MenuView: UIView {
             self.medals.append(self.newImgView())
             self.addSubview(self.medals[i])
         }
+        
+        self.titleLabel = setTitleLabel(sizeFont: 0, align: .center, w: .semibold)
+        self.addSubview(self.titleLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -72,51 +80,31 @@ class MenuView: UIView {
         return imgView
     }
     
+    public func setTitleLabel(sizeFont:CGFloat, align:NSTextAlignment, w:UIFont.Weight) -> UILabel{
+        let lbl:UILabel = UILabel()
+        lbl.textAlignment = align
+        lbl.font = .systemFont(ofSize: sizeFont, weight: w)
+        lbl.numberOfLines = 0
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = "Choose the stage you want to play!"
+        lbl.textColor = #colorLiteral(red: 0.6227829456, green: 0.3547682166, blue: 0.8711426854, alpha: 1)
+        return lbl
+    }
+    
+    private func setbuttonBack() -> UIButton {
+        let bt: UIButton = UIButton(type: .custom)
+        bt.setTitleColor(#colorLiteral(red: 1, green: 0.9844267964, blue: 0.9319559932, alpha: 1), for: .normal)
+        bt.backgroundColor = #colorLiteral(red: 0.6227829456, green: 0.3547682166, blue: 0.8711426854, alpha: 1)
+        bt.setImage(UIImage(named: "Back"), for: .normal)
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.clipsToBounds = true
+        
+        return bt
+    }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        /* MARK: Constraints - Letters */
-        
-        // Letra I
-        self.labels[0].trailingAnchor.constraint(equalTo: self.labels[1].leadingAnchor, constant: 1).isActive = true
-        self.labels[0].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-
-        
-        // Letra N
-        self.labels[1].trailingAnchor.constraint(equalTo: self.labels[2].leadingAnchor, constant: 1).isActive = true
-        self.labels[1].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
-        
-        // Letra K
-        self.labels[2].trailingAnchor.constraint(equalTo: self.labels[3].leadingAnchor, constant: 1).isActive = true
-        self.labels[2].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
-        
-        // Letra O (primeira)
-        self.labels[3].trailingAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.labels[3].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-
-        
-        // Letra L
-        self.labels[4].leadingAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.labels[4].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
-        
-        // Letra O (segunda)
-        self.labels[5].leadingAnchor.constraint(equalTo: self.labels[4].trailingAnchor, constant: -1).isActive = true
-        self.labels[5].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
-        
-        // Letra R
-        self.labels[6].leadingAnchor.constraint(equalTo: self.labels[5].trailingAnchor, constant: -1).isActive = true
-        self.labels[6].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
-        
-        // Letra S
-        self.labels[7].leadingAnchor.constraint(equalTo: self.labels[6].trailingAnchor, constant: -1).isActive = true
-        self.labels[7].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.1).isActive = true
-        
         
         /* MARK: Constraints - Buttons */
         
@@ -170,7 +158,19 @@ class MenuView: UIView {
             self.medals[2].centerXAnchor.constraint(equalTo: self.buttons[2].trailingAnchor, constant: -10).isActive = true
             self.medals[2].heightAnchor.constraint(equalToConstant: 62).isActive = true
             self.medals[2].widthAnchor.constraint(equalToConstant: 60).isActive = true
+            
+            
         }
         
+        self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40).isActive = true
+        self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40).isActive = true
+        self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.155).isActive = true
+        
+        buttonBack.layer.cornerRadius = self.bounds.height * 0.19 * 0.22
+        self.buttonBack.topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.070).isActive = true
+        self.buttonBack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30).isActive = true
+        self.buttonBack.heightAnchor.constraint(equalToConstant: self.bounds.height * 0.08).isActive = true
+        self.buttonBack.widthAnchor.constraint(equalToConstant: self.bounds.height * 0.08).isActive = true
     }
 }
