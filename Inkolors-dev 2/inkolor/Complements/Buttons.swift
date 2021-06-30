@@ -14,7 +14,7 @@ class Buttons {
         self.setBtImage(bt: bt, icon: icon, sizeFont)
         bt.layer.cornerRadius = corner/2
         bt.tintColor = #colorLiteral(red: 1, green: 0.9845215678, blue: 0.9319496751, alpha: 1)
-        bt.backgroundColor = #colorLiteral(red: 0.4485500455, green: 0.8666214347, blue: 0.7166131139, alpha: 1)
+        bt.backgroundColor = #colorLiteral(red: 0.5848751664, green: 0.3787113726, blue: 0.8420533538, alpha: 1)
         bt.translatesAutoresizingMaskIntoConstraints = false
         
         bt.widthAnchor.constraint(equalToConstant: corner).isActive = true
@@ -28,7 +28,7 @@ class Buttons {
     }
     
     public func getHomeButton() -> UIButton{
-        return self.getButtun(icon: "house.fill")
+        return self.getButtun(icon: "xmark")
     }
     
     public func getSoundOnButton() -> UIButton{

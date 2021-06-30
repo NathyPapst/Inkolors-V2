@@ -32,7 +32,6 @@ class PlayViewController: UIViewController {
         for x in 0..<self.colors.count {
             labels[x].text = self.letters[x]
             labels[x].textColor = self.colors[x]
-
             labels[x].font = .systemFont(ofSize: self.view.bounds.height * 0.065, weight: .bold)
         }
         
