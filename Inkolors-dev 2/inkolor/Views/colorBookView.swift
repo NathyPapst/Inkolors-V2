@@ -130,6 +130,10 @@ class colorBookView: UIView {
         super.layoutSubviews()
         
         let sizeBut: CGFloat = 0.08
+        let sizeColor: CGFloat = 0.325
+        
+        let heightColor5: CGFloat = 0.875
+        let heightColor4: CGFloat = 0.75
     
         // Back button (view)
         buttonBack.layer.cornerRadius = self.bounds.height * 0.19 * 0.22
@@ -184,15 +188,15 @@ class colorBookView: UIView {
         
         self.colorsLabels[6].leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.colorsLabels[6].trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -260).isActive = true
-        self.colorsLabels[6].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.73).isActive = true
+        self.colorsLabels[6].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * heightColor4).isActive = true
         
         self.colorsLabels[7].leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.colorsLabels[7].trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
-        self.colorsLabels[7].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.73).isActive = true
+        self.colorsLabels[7].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * heightColor4).isActive = true
         
         self.colorsLabels[8].leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 230).isActive = true
         self.colorsLabels[8].trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        self.colorsLabels[8].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.73).isActive = true
+        self.colorsLabels[8].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * heightColor4).isActive = true
         
         self.colorsLabels[9].leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.colorsLabels[9].trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -260).isActive = true
@@ -200,11 +204,11 @@ class colorBookView: UIView {
         
         self.colorsLabels[10].leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.colorsLabels[10].trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
-        self.colorsLabels[10].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.875).isActive = true
+        self.colorsLabels[10].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * heightColor5).isActive = true
         
         self.colorsLabels[11].leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 230).isActive = true
         self.colorsLabels[11].trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        self.colorsLabels[11].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * 0.875).isActive = true
+        self.colorsLabels[11].topAnchor.constraint(equalTo: self.topAnchor, constant: self.bounds.height * heightColor5).isActive = true
 
       }
 }
